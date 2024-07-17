@@ -315,75 +315,34 @@
 
                                     <div class="row mil-mb-60">
                                         <div class="col-sm-6">
-
+                                            {% for team in teams%}
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="{% static 'img/faces/1.jpg' %}" alt="Team member">
+                                                <img src="{{team.image.url}}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
-                                                        <h5 class="mil-muted mil-mb-5"><a href="{% url 'home-page' %}">Anna Oldman</a></h5>
-                                                        <p class="mil-link mil-light-soft mil-mb-10">Art Director</p>
-                                                        <ul class="mil-social-icons mil-center">
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
-                                                        </ul>
+                                                        <h5 class="mil-muted mil-mb-5"><a href="{% url 'home-page' %}">{{team.name}}</a></h5>
+                                                        <p class="mil-link mil-light-soft mil-mb-10">{{team.director}}</p>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="{% static 'img/faces/3.jpg' %}" alt="Team member">
-                                                <div class="mil-description">
-                                                    <div class="mil-secrc-text">
-                                                        <h5 class="mil-muted mil-mb-5"><a href="{% url 'home-page' %}">Oscar Freeman</a></h5>
-                                                        <p class="mil-link mil-light-soft mil-mb-10">Frontend Dev</p>
-                                                        <ul class="mil-social-icons mil-center">
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            {% endfor %}
 
                                         </div>
                                         <div class="col-sm-6">
 
                                             <p class="mil-mobile-hidden mil-text-sm mil-mb-30" style="height: 30px;"><span class="mil-accent">*</span> The founders of our agency</p>
-
+                                            {% for team in next_teams%}
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="{% static 'img/faces/2.jpg' %}" alt="Team member">
+                                                <img src="{{team.image.url}}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
-                                                        <h5 class="mil-muted mil-mb-5"><a href="{% url 'home-page' %}">Emma Newman</a></h5>
-                                                        <p class="mil-link mil-light-soft mil-mb-10">Founder</p>
-                                                        <ul class="mil-social-icons mil-center">
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
-                                                        </ul>
+                                                        <h5 class="mil-muted mil-mb-5"><a href="{% url 'home-page' %}">{{team.name}}</a></h5>
+                                                        <p class="mil-link mil-light-soft mil-mb-10">{{team.director}}</p>
                                                     </div>
                                                 </div>
                                             </div>
+                                            {% endfor %}
 
-                                            <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="{% static 'img/faces/4.jpg' %}" alt="Team member">
-                                                <div class="mil-description">
-                                                    <div class="mil-secrc-text">
-                                                        <h5 class="mil-muted mil-mb-5"><a href="{% url 'home-page' %}">Lisa Trueman</a></h5>
-                                                        <p class="mil-link mil-light-soft mil-mb-10">UI/UX Designer</p>
-                                                        <ul class="mil-social-icons mil-center">
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
 
                                         </div>
                                     </div>

@@ -66,10 +66,15 @@ def blog_view(request):
     return render(request, 'blog.html',context)
 
 def home_view(request): 
-    # popular_blogs = Blog.objects.all().order_by('-hit_count__hits')
     popular_blogs = Blog.objects.all()
     sorted(popular_blogs,key=lambda x:x.hit_count.hits,reverse=True)
-    context = {"popular_blogs":popular_blogs}
+    team = Team.objects.all()[:2]
+    next_teams = list(Team.objects.all().order_by('-id')[:2][::-1])
+    context = {
+        "popular_blogs":popular_blogs, 
+        "teams":team,
+        "next_teams":next_teams,
+    }
     return render(request,'home.html',context)
 
 
